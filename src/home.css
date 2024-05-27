@@ -1,0 +1,580 @@
+@font-face {
+    font-family: "montserrat";
+    src: url("./assets/montserrat.ttf") format("truetype");
+    font-style: normal;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "montserrat";
+}
+
+header {
+    position: relative;
+}
+
+.navigation-bar {
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: .9em 1em;
+    background-color: #05000cad; 
+}
+
+.navigation-bar hr {
+    display: none;
+}
+
+.restaurant-name {
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+}
+
+.navigation-menu {
+    display: none;
+}
+
+.hamburger {
+    display: block;
+    cursor: pointer;
+    border: none;
+    background-color: transparent;
+}
+
+.bar {
+    display: block;
+    width: 2.2em;
+    height: .2em;
+    margin: .5em auto;
+    transition: all 0.3s ease-in-out;
+    background-color: #ffffff;
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+    
+.hamburger.active .bar:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+    
+.hamburger.active .bar:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+.mobile-navigation {
+    position: fixed;
+    top: 5em;
+    left: 100%;
+    width: 100%;
+    min-height: 100vh;
+    display: block;
+    z-index: 98;
+    background-color: #05000c;
+    padding-top: 5em;
+    transition: 0.4s;    
+}
+
+.mobile-navigation.active {
+    background-color: #05000c;
+    left: 0;
+}
+
+.mobile-navigation #home-button,
+.mobile-navigation #menu-button,
+.mobile-navigation #about-button,
+.mobile-navigation #contact-button,
+.mobile-navigation #order-button {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto 1em;
+    text-align: center;
+    font-weight: 700;
+    padding: 1em 2em;
+    background-color: #b37c10;
+    color: #05000c;
+    border-radius: 5px;
+    border: none;
+}
+
+.mobile-navigation #home-button:hover,
+.mobile-navigation #menu-button:hover,
+.mobile-navigation #about-button:hover,
+.mobile-navigation #contact-button:hover,
+.mobile-navigation #order-button:hover {
+    background-color: #f6a502;
+}
+
+.slider-container {
+    max-width: 100%;
+    position: relative;
+    margin: auto;
+}
+
+.images {
+    display: none;
+}
+
+.nested-image {
+    width: 100%;
+    object-fit: cover;
+}
+
+.image-text {
+   display: none;
+}
+
+.arrow-button {
+    background-color: transparent;
+    border: none;
+}
+
+.arrow-button:focus {
+    outline: none;
+}
+
+.circle-navigation {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.circle {
+    height: 1em;
+    width: 1em;
+    border: 0;
+    margin: 1em;
+    border-radius: 50%;
+    background-color: #d1cdd767;
+}
+
+.circle.active {
+    background-color: #05000c96;
+}
+
+.popular-food-container {
+    background-color: #f0f0f0;
+} 
+
+.popular-food-title {
+    padding: 1.5em 1em; 
+    color: #05000c;
+    font-size: 2.1rem;  
+    font-weight: 500;
+}
+
+.popular-food-description {
+    color: #05000c;
+    padding: 0 2em;
+    line-height: 1.3;
+}
+
+.popular-food-container hr {
+    height: 1px;
+    border: none;
+    background-color: #b37c10;
+    margin: 2em;
+}
+
+.dish-card-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.dish-card {
+    width: 350px;
+    background-color: #05000c;
+    color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 2.5em;
+}
+
+.dish-image  {
+   width: 100%;
+   height: auto;
+}
+
+.dish-content {
+    padding: 1em;
+}
+
+.dish-card h3 {
+    margin-bottom: .5em;
+}
+
+.dish-card p {
+    font-size: .9rem;
+    line-height: 1.3;
+}
+
+.ratings {
+    display: flex;
+    justify-content: space-between;
+    margin-top: .5em;
+}
+
+.star-rating {
+    color: #b37c10;
+}
+
+.price {
+    font-weight: 700;
+    color: #b37c10;
+}
+
+.restaurant-review {
+    background-color: #05000c;
+    color: #f0f0f0;
+    display: flex;
+    flex-direction: column;
+} 
+
+.review-title {
+    align-self: center;
+    text-align: center;
+    padding: 3em 1em;
+    letter-spacing: 0.2rem;
+}
+
+.choose-us-text {
+    padding: 0em 2em;
+    font-weight: 400;
+}
+
+.restaurant-review hr {
+    height: .5px;
+    border: none;
+    background-color: #b37c10;
+    margin-top: 4em;
+}
+
+.review-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap; 
+}
+
+.review-card {
+    width: 350px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    margin: 3em;
+}
+
+.customer-image {
+    width: 25%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.ratings-star {
+    color: #b37c10;
+}
+
+.review-date {
+    font-style: italic;
+}
+
+.more-reviews-button {
+    align-self: center;
+    background-color: #05000c;
+    color: #f0f0f0;
+    font-size: 1.1rem;
+    padding: 1em;
+    margin-top: 1em;
+    margin-bottom: 2em;
+    border: 1px solid #f0f0f0;
+}
+
+.more-reviews-button:hover {
+    color: #b37c10;
+}
+
+.subscription-section {
+    background-color: #f0f0f0;
+    color: #05000c;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    padding: 4em 2em;
+}
+
+.input-container,
+.info-container {
+    flex-grow: 1;
+    width: 300px;
+    height: auto;
+} 
+
+.input-container * {
+    margin-bottom: .5em;
+}
+
+.input-container #name,
+.input-container #email{
+    outline: none;
+    border: 2px solid #05000c;
+    height: 40px;
+    width: 60%;
+    padding: 10px;
+}
+
+.input-container #name::placeholder,
+.input-container #email::placeholder {
+    color: #b37c10;
+    font-style: italic;
+} 
+
+.input-container input[type="submit"] {
+    padding: .5em 2.5em; 
+    font-size: 1.3rem;
+    background-color: #05000c;
+    color: #f0f0f0;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+ .input-container input[type="submit"]:hover {
+    color: #b37c10;
+}
+
+.info-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.info-container h2 {
+    margin-bottom: .5em;
+}
+
+footer {
+    background-color: #05000c;
+    color: #f0f0f0;
+}
+
+.footer-row1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2em;
+    padding: 2em;
+}
+
+.footer-contact-us,
+.footer-quick-links,
+.footer-opening-hours,
+.footer-newsletter,
+.footer-social-media {
+    flex-grow: 1;
+    width: 280px;
+    height: auto;
+}
+
+.footer-row1 h3 {
+    margin-bottom: .8em;
+    color: #b37c10;
+}
+
+.footer-row1 ul {
+    list-style: none;
+    padding: 0;
+}
+
+.quick-links-ul a {
+    text-decoration: none;
+    color: #f0f0f0;
+}
+
+.sign-button {
+    font-size: 1.1rem;
+    font-weight: 500;
+    padding: .8em 3em;
+    margin-top: 1em;
+    color: #05000c;
+    background-color: #b37c10;
+    border-radius: 5px;
+}
+
+.footer-social-media {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.instagram-icon,
+.twitter-icon,
+.facebook-icon {
+    width: 48px;
+    height: 48px;
+}
+
+.instagram-icon {
+    background-image: url("./assets/instagram.png");
+}
+
+.twitter-icon {
+    background-image: url("./assets/twitter.png");
+}
+
+
+.facebook-icon {
+    background-image: url("./assets/facebook.png");
+}
+
+.sign-button:hover {
+    background-color: #f9a703;
+}
+
+.footer-row2 {
+    text-align: center;
+    padding: 2em 0em;
+    letter-spacing: 0.1rem;
+    font-weight: 500;
+}
+
+.github-icon {
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    background-image: url("./assets/github.png");
+    color: white; 
+    margin-left: 4px;
+}
+
+@media (min-width: 768px) {
+    .hamburger {
+        display: none;
+    }
+
+    .mobile-navigation {
+        display: none;
+    }
+
+    .navigation-bar {
+        min-height: 4em;
+        display: flex;
+        flex-direction: column;
+        padding: 1em 1.5em;
+        gap: 1.3em;
+    }
+
+    .navigation-bar hr {
+        display: block;
+        height: 3px;
+        border: none;
+        background-color: #b37c10;
+    }
+    
+    .restaurant-name {
+        text-align: center;
+    }
+
+    .navigation-menu {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 1.6em;
+    }
+
+    .navigation-menu #home-button,
+    .navigation-menu #menu-button,
+    .navigation-menu #about-button,
+    .navigation-menu #contact-button,
+    .navigation-menu #order-button {
+        color: #fff;
+        font-family: "montserrat";
+        font-size: 1rem;
+        background-color: transparent;
+        border: none;
+    }
+
+    .navigation-menu #order-button {
+        padding: .5em;
+        border: 2px solid #fff;
+    }
+
+    .navigation-menu #home-button:hover,
+    .navigation-menu #menu-button:hover,
+    .navigation-menu #about-button:hover,
+    .navigation-menu #contact-button:hover,
+    .navigation-menu #order-button:hover {
+        color: #eba20f;
+    } 
+
+    .navigation-menu #home-button:focus,
+    .navigation-menu #menu-button:focus,
+    .navigation-menu #about-button:focus,
+    .navigation-menu #contact-button:focus {
+        outline: none;
+        text-decoration: underline;
+        text-decoration-color: #b37c10;
+        text-decoration-thickness: 2px;
+        text-underline-offset: 1em;
+    }
+
+    .image-text {
+        position: absolute;
+        top: 60%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .arrow-button {
+        background-color: transparent;
+        border: none;
+    }
+
+    .down-arrow {
+        border-top: .2em solid rgba(255, 255, 255, 0.811);
+        border-left: .2em solid rgba(255, 255, 255, 0.811);
+        width: clamp(1.3rem, 5vw, 3rem);
+        height: clamp(1.3rem, 5vw, 3rem); 
+        animation: move 1.5s ease-in-out infinite;
+    }
+    
+    @keyframes move {
+        0%, 100% {
+           transform: translateY(0) rotate(225deg);
+        }
+        50% {
+           transform: translateY(-2rem) rotate(225deg);
+        }
+    }
+
+    .circle {
+        height: 2em;
+        width: 2em;
+        margin: 2em;
+    }
+}
+
+@media (min-width: 1024px) {
+
+    .navigation-bar {
+        padding: 1.6em 3em; 
+    }
+
+    .image-text {
+        bottom: 50%;
+    }
+
+    .down-arrow {
+        width: clamp(2rem, 5vw, 4rem); 
+        height: clamp(2rem, 5vw, 4rem); 
+    } 
+
+}
+
+

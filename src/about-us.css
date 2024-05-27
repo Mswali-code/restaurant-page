@@ -1,0 +1,104 @@
+.about-div {
+    background-color: #f0f0f0;
+}
+
+.about-container {
+    display: flex;
+    flex-direction: column;
+    padding-top: 9em;
+    padding-bottom: 3em;
+    padding-right: 2em;
+    padding-left: 2em;
+    gap: 3em;
+}
+
+.about-nested-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em; 
+}
+
+.about-title {
+    color: #05000c;
+}
+
+.founder-info-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.founder-image {
+    width: 100%;
+    height: auto;
+}
+
+.founder-content {
+    font-weight: 600;
+    text-align: center;
+}
+
+.staff-container {
+    display: flex;
+    flex-direction: column;
+    gap: 4em;
+    background-color: #05000c;
+    color: #f0f0f0;
+    padding: 3em;
+}
+
+.staff-title {
+    text-align: center;
+}
+
+.chef-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5em;
+}
+
+.chef1-container,
+.chef2-container,
+.chef3-container {
+    width: 400px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    background-color: #0d0517;
+}
+
+.chef-image {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.chef-content {
+    align-self: center;
+    text-align: center;
+    font-style: italic;
+    color: #b37c10;
+    padding: .5em 0em;
+}
+
+.story-container {
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+}
+
+.story-hr,
+.about-hr {
+    border: none;
+    height: 1px;
+    background-color: #b37c10;
+}
+
+@media (min-width: 768px) {
+    .founder-info-container {
+        width: 600px;
+    }
+}

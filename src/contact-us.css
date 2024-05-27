@@ -1,0 +1,112 @@
+.contact-div {
+    background-color: #f0f0f0;
+    color: #05000c;
+}
+
+.contact-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 3em; 
+    padding: 10em 2em 2em;
+}
+
+.contact-wrapping {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-wrapping h1 {
+    padding-bottom: 1em;
+}
+
+.contact-text {
+    font-weight: 500;
+}
+
+.contact-text h3 {
+    color: #b37c10;
+    padding: .5em 0em;
+}
+
+.opening-hours-ul {
+    list-style: none;
+    padding: 0;
+    margin-bottom: .8em;
+}
+
+.location-paragraph,
+.contact-number {
+    margin-bottom: .8em;
+}
+
+.contact-message {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+
+.contact-message #name,
+.contact-message #email {
+    height: 50px;
+    border: 3px solid #000000;
+    padding: 20px;
+}
+
+.contact-message #name::placeholder,
+.contact-message #email::placeholder {
+    font-weight: 700;
+    font-size: 1.2rem;
+    color: #b37c10;
+} 
+
+#message {
+    resize: vertical;
+    width: 100%;
+    max-width: 400px; 
+    height: 100px;
+    max-height: 300px;
+    border: 3px solid #000000;
+    padding: 20px;
+}
+
+#message::placeholder {
+    font-style: italic;
+}
+
+.contact-message #name:focus,
+.contact-message #email:focus, 
+#message:focus {
+    outline: none;
+    border: 3px solid #b37c10;
+}
+
+.submit-button {
+    background-color: #05000c;
+    color: #f0f0f0;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: .6em .5em;
+    max-width: 150px;
+}
+
+.submit-button:hover {
+    color: #b37c10;
+}
+
+.map-container {
+    padding: 1em;
+    background-color: #ffffff;
+}
+
+.map-image {
+    width: 100%;
+    object-fit: cover;
+}

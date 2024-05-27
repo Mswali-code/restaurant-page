@@ -1,0 +1,40 @@
+.menu-div {
+    background-color: #f0f0f0;
+}
+
+.menu-dish-card {
+    width: 350px;
+    background-color: #05000c;
+    color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 2.5em;
+}
+
+.menu-dish-card h3 {
+    margin-bottom: .5em;
+}
+
+.menu-dish-card p {
+    font-size: .9rem;
+    letter-spacing: .8px;
+}
+
+.more-dish-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: .5em;
+}
+
+.order-button {
+    background-color: #b37c10;
+    color: #05000c;
+    padding: 0.5em;
+    border-radius: 5px;
+    font-weight: 500;
+}
+
+.order-button:hover {
+    transform: scale(1.1);
+}
